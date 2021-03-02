@@ -6,16 +6,6 @@ SELECT * FROM TiposDeHabilidades;
 SELECT * FROM Habilidades;
 SELECT * FROM Classes_Habilidades;
 
---Atualizar o nome do personagem Fer8 para Fer7
-SELECT * FROM Personagens ORDER BY Nome
-UPDATE Personagens SET Nome = 'Fer7'
-WHERE IdPersonagem = 3;
-
---Atualizar o nome da classe de Necromante para Necromancer
-SELECT * FROM Classes
-UPDATE Classes SET Nome = 'Necromancer'
-WHERE IdClasse = 5;
-
 --Selecionar todos os personagens
 SELECT * FROM Personagens;
 
@@ -29,7 +19,7 @@ SELECT Classes.Nome AS NomeDasClasses FROM Classes;
 SELECT * FROM Habilidades;
 
 --Realizar a contagem de quantas habilidades estão cadastradas
-SELECT COUNT(*) AS QuantidadeDeHabilidades FROM Habilidades;
+SELECT COUNT(IdHabilidade) AS QuantidadeDeHabilidades FROM Habilidades;
 
 --Selecionar somente os id’s das habilidades classificando-os por ordem crescente
 SELECT Habilidades.IdHabilidade FROM Habilidades 
